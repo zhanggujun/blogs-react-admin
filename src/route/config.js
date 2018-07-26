@@ -1,0 +1,29 @@
+export default {
+  menu:[{
+    key:'/home/index',title:'首页',icon:'el-icon-document',component:'HomeIndex'
+  },{
+    key:'/home/article',title:'文章管理',icon:'el-icon-menu',
+    subs:[{
+      key:'/home/article/list',title:'文章列表',component:'ArticleList'
+    },{
+      key:'/home/article/add',title:'添加文章',component:'ArticleAdd'
+    }]
+  },{
+    key:'/home/label',title:'标签管理',icon:'el-icon-message',
+    subs:[{
+      key:'/home/label/label',title:'标签列表',component:'Label'
+    }]
+  },{
+    key:'/home/link',title:'标签3',icon:'el-icon-message',
+    subs:[{
+      key:'/home/link/link',title:'标签3-1',component:'Link'
+    }]
+  },{
+    key:'/home/users',title:'标签4',icon:'el-icon-message',
+    subs:[{
+      key:'/home/users/users',title:'标签4-1',component:'Users'
+    }]
+  },{
+    key:'/home',title:'瞎写的',icon:'el-icon-message',component:'HomeIndex'
+  }]
+}
