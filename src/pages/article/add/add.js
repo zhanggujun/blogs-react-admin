@@ -1,6 +1,7 @@
 import React from 'react';
 import {MessageBox} from 'element-react';
 import PropTypes from 'prop-types';
+import DocumentMeta from 'react-document-meta';
 import style from './add.styl';
 import axios from 'axios';
 import {ossUpload} from '../../../utils/ossUpload.js';
@@ -52,6 +53,7 @@ export default class ArticleAdd extends React.Component {
   render() {
     return (
       <div className={style.addBox}>
+        <DocumentMeta {...{title:'微微下雨天 | 添加文章'}}/>
         <Breadcrumb menus={this.state.menus}/>
         <div className={style.formBox}>
           <div className={style.formBoxLeft}>

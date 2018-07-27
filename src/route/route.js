@@ -10,7 +10,7 @@ export default class Contents extends React.Component {
   render() {
     // console.log(this.props);
     return (
-      <Switch>  
+      <Switch>
         {
           Object.keys(Config).map(key =>
             Config[key].map(r => {

@@ -4,7 +4,7 @@ import './index.styl';
 import App from './App';
 import 'element-theme-default';
 import registerServiceWorker from './registerServiceWorker';
-// import Content from './route/route';
+import Loadable from 'react-loadable';
 import {
   // BrowserRouter,
   HashRouter,
@@ -12,16 +12,22 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
-import login from './pages/login/login';
-import NotFind from './pages/404/404';
-
+import Loading from './components/globalLoading/globalLoading';
+const Login = Loadable({
+  loader:()=>import('./pages/login/login'),
+  loading:Loading,
+});
+const NotFind = Loadable({
+  loader:()=>import('./pages/404/404'),
+  loading:Loading,
+});
 ReactDOM.render(
   <HashRouter>
     <div className="sectionBox">
       <Switch>
         <Route path='/' exact render={()=><Redirect to="/home/index"/>}/>
         <Route path='/home' component={App}/>
-        <Route path='/login' component={login}/>
+        <Route path='/login' component={Login}/>
         <Route exact component={NotFind}/>
       </Switch>
     </div>

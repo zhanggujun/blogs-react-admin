@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './label.styl';
+import DocumentMeta from 'react-document-meta';
 import Breadcrumb from '../../../components/Breadcrumb/Breadcrumb';
 import axios from 'axios';
 import {TransTime,mathId} from '../../../utils/utils.js';
@@ -51,6 +52,7 @@ export default class LabelList extends React.Component {
   render() {
     return (
       <div className={style.listBox}>
+        <DocumentMeta {...{title:'微微下雨天 | 标签列表'}}/>
         <Breadcrumb menus={this.state.menus}/>
         <div className={style.lableBox}>
           <div className={style.newLabel}>

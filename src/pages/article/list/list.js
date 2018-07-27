@@ -2,6 +2,7 @@ import React from 'react';
 import style from './list.styl';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import DocumentMeta from 'react-document-meta';
 import Loading from '../../../components/loading/loading';
 import {TransTime} from '../../../utils/utils.js';
 import {
@@ -88,6 +89,7 @@ export default class ArticleList extends React.Component {
   render() {
     return (
       <div className={style.listBox}>
+        <DocumentMeta {...{title:'微微下雨天 | 文章列表'}}/>
         <Breadcrumb menus={this.state.menus} />
         <div className={style.section}>
           <div className={style.searchBox}>
